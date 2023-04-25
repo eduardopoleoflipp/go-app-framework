@@ -17,19 +17,19 @@ var DefaultConfig = Config{DefaultConfig: "defaultValue"}
 var AppConfig Config
 
 // need to be overwritten by the actual app
-var development, staging, production Config
+var Development, Staging, Production Config
 
 func InitConfig() Config {
 	env := os.Getenv("ENVIRONMENT")
 	switch env {
 	case "development":
-		AppConfig = development
+		AppConfig = Development
 	case "staging":
-		AppConfig = staging
+		AppConfig = Staging
 	case "production":
-		AppConfig = production
+		AppConfig = Production
 	default:
-		AppConfig = production
+		AppConfig = Production
 	}
 
 	mergo.Merge(AppConfig, DefaultConfig)
