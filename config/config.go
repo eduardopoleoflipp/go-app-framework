@@ -17,6 +17,7 @@ var DefaultConfig = Config{DefaultConfig: "defaultValue"}
 var AppConfig Config
 
 // need to be overwritten by the actual app
+// Added some few comments in here
 var Development, Staging, Production Config
 
 func InitConfig() Config {
